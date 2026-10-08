@@ -8,6 +8,7 @@ from rest_framework import viewsets, permissions  # noqa: F401  (a utiliser)
 
 from .models import Reservation, Salle  # noqa: F401  (a utiliser)
 from .serializers import ReservationSerializer, SalleSerializer
+from rest_framework.pagination import PageNumberPagination
 
 # TODO : votre code ici
 class SalleViewSet(viewsets.ModelViewSet):
@@ -18,3 +19,6 @@ class SalleViewSet(viewsets.ModelViewSet):
       if self.action in ('list','retreive'):
           return [permissions.AllowAny]
       return[permissions.IsAdminUser]
+
+class ReservationPagination(PageNumberPagination):
+    page_size = 10 
