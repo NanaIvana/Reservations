@@ -33,9 +33,6 @@ Super-utilisateur : `admin` / `admin123`.
 |-------|---------|----------------|
 | `/api/salles/` | GET | Everyone |
 | `/api/salles/` | POST | Staff only |
-| `/api/salles/{id}/` | GET | Everyone |
-| `/api/salles/{id}/` | PUT, PATCH, DELETE | Staff only |
-| `/api/salles/{id}/occupation/` | GET | Everyone |
 | `/api/reservations/` | GET | Everyone |
 | `/api/reservations/{id}/` | GET | Everyone |
 
