@@ -6,7 +6,7 @@
 
 | Membre | Compte GitHub | Rôle / tâches principales |
 |--------|---------------|---------------------------|
-| ...    | ...           | ...                       |
+| Nana Ivana Cindy   | https://github.com/NanaIvana/Reservations.git           | Execute all task                    |
 
 ## Installation
 
