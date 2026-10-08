@@ -4,8 +4,17 @@ A FAIRE :
   - SalleViewSet (ModelViewSet), avec l'action `occupation` (tache 5)
   - ReservationViewSet (ModelViewSet), avec perform_create (tache 3)
 """
-from rest_framework import viewsets  # noqa: F401  (a utiliser)
+from rest_framework import viewsets, permissions  # noqa: F401  (a utiliser)
 
 from .models import Reservation, Salle  # noqa: F401  (a utiliser)
+from .serializers import ReservationSerializer, SalleSerializer
 
 # TODO : votre code ici
+class SalleViewSet(viewsets.ModelViewSet):
+  queryset = Salle.objects.all()
+  serializer_class = SalleSerializer
+
+  def get_permissions(self):
+      if self.action in ('list','retreive'):
+          return [permissions.AllowAny]
+      return[permissions.IsAdminUser]
